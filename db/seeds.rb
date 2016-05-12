@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+# require "faker"
+
+# Ingredients
+
+Ingredient.destroy.all
+
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+
+15.times do
+  Ingredient.create(name: Faker::StarWars.specie)
+end

@@ -1,0 +1,20 @@
+<!-- app/views/restaurants/index.html.erb -->
+<div class="header text-center">
+  <h1>Cocktails</h1>
+  <p><%= link_to "Create new cocktail", new_cocktail_path %></p>
+</div>
+
+<div class="container">
+  <div class="row">
+  <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-6 col-lg-4">
+      <div class="card">
+        <%= render "cocktail_card", cocktail: cocktail %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+
+
